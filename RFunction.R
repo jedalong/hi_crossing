@@ -32,6 +32,10 @@ rFunction = function(data,key,value,geom,crs_code) {
     osm_temp <- hi_get_osm(move=data,key=key,value=value,geom=geom,poly2line=poly2line)
   }
   
+  if (crs_code == 0){
+    crs_code <- st_crs(data)
+  }
+  
   move_x <- hi_crossing(data,osmdata=osm_temp)
   x_sf <- hi_crossing_loc(data,osmdata=osm_temp,crs_code=crs_code)
   
