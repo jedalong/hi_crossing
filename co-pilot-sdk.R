@@ -24,7 +24,7 @@ outputFileName = "./data/output/output.rds"
 args <- list() # if your function has no arguments, this line still needs to be active
 # Add all your arguments of your r-function here
 args[["key"]] = "highway"
-args[["value"]] = "track" 
+args[["value"]] = "primary" 
 args[["geom"]] = "line"
 args[["crs_code"]] = 32618
 
