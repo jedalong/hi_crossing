@@ -5,7 +5,7 @@ library('devtools')
 library('ggplot2')
 library('units')
 library('mapview')
-devtools::install_github('jedalong/wildlifeHI')
+#devtools::install_github('jedalong/wildlifeHI')
 library('wildlifeHI')
 
 ## The parameter "data" is reserved for the data object passed on from the previous app
@@ -17,15 +17,15 @@ rFunction = function(data,key,value,geom,crs_code) {
   
   poly2line <- TRUE
   tz <- attr(timestamps(data),'tzone')
-  #check input data type
-  if (!inherits(data,'MoveStack')){
-    if (inherits(data,'Move')){
-      move <- moveStack(move, forceTz=tz) #fix this timestamp to correct time zone
-    } else {
-      print('Input Data not of class MoveStack. Returning NULL.')
-      return(NULL)
-    }
-  }
+  # #check input data type
+  # if (!inherits(data,'MoveStack')){
+  #   if (inherits(data,'Move')){
+  #     move <- moveStack(move, forceTz=tz) #fix this timestamp to correct time zone
+  #   } else {
+  #     print('Input Data not of class MoveStack. Returning NULL.')
+  #     return(NULL)
+  #   }
+  # }
   
   if (value == 'all'){
     osm_temp <- hi_get_osm(move=data,key=key,geom=geom,poly2line=poly2line)
