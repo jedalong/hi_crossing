@@ -4,7 +4,6 @@ library('osmdata')
 library('devtools')
 library('ggplot2')
 library('units')
-library('mapview')
 #devtools::install_github('jedalong/wildlifeHI')
 library('wildlifeHI')
 
@@ -56,10 +55,10 @@ rFunction = function(data,key,value,geom,crs_code) {
   suppressWarnings(st_write(x_sf,appArtifactPath(shpName)))
   
   #Crossing Map
-  m <- mapview(x_sf['value'])
-  htmlName <- 'Map_Crossing.html'
+  #m <- mapview(x_sf['value'])
+  #htmlName <- 'Map_Crossing.html'
   #mapshot(m,file='D:/DELETE.png',url='D:/DELETE.html')
-  mapshot(m,url=appArtifactPath(htmlName))
+  #mapshot(m,url=appArtifactPath(htmlName))
   
   return(move_x)
 }

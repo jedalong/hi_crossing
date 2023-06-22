@@ -53,7 +53,6 @@
       {"name": "ggplot2"},
       {"name": "units"},
       {"name": "devtools"}
-      {"name": "mapview"}
     ]
   },
   "createsArtifacts": true,

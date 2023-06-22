@@ -37,7 +37,6 @@ MoveStack in Movebank format with three additional columns:
 `Table_CrossingType.csv`: A csv file with a table of the number of crossings associated with each OSM valye. 
 `Table_FixCrossings.csv`: A csv file with only those fixes associated with a crossing. First fix in a crossing segment only.
 `Shapfile_Crossings.shp`: A shapefile with crossing locations (also has .shx,.dbf.prj files)
-`Map_Crossings.html`: An interactive map widget of crossing locations derived from R package mapview. Includes a corresponding data folder.
 
 ### Settings 
 
